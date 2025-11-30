@@ -9,7 +9,7 @@
     "space-age",
     "quality"
   ],
-  "description": "A agricultural tower able to condenses various liquids every time it harvests a plant.",
+  "description": "An agricultural tower able to condense various liquids every time it harvests a plant.",
   "quality_required": true,
   "rail_bridges_required": true,
   "space_travel_required": true,
