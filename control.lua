@@ -3,8 +3,8 @@ local function on_built_tower(event)
 	if not (tower and tower.valid and tower.name == "condensing-agricultural-tower") then
 		return
 	end
-	storage.arig_condensing_agricultural_tower = storage.arig_condensing_agricultural_tower or {}
-	storage.arig_condensing_agricultural_tower[tower.unit_number] = { 
+	storage.condensing_agricultural_tower = storage.condensing_agricultural_tower or {}
+	storage.condensing_agricultural_tower[tower.unit_number] = { 
 		tower = tower, 
 		tank = nil
 	}
@@ -16,29 +16,29 @@ local function on_removed_tower(event)
 		return
 	end
 
-	local data = storage.arig_condensing_agricultural_tower and storage.arig_condensing_agricultural_tower[tower.unit_number]
+	local data = storage.condensing_agricultural_tower and storage.condensing_agricultural_tower[tower.unit_number]
 	if data and data.tank and data.tank.valid then
 		data.tank.destroy()
 	end
-	if storage.arig_condensing_agricultural_tower then
-		storage.arig_condensing_agricultural_tower[tower.unit_number] = nil
+	if storage.condensing_agricultural_tower then
+		storage.condensing_agricultural_tower[tower.unit_number] = nil
 	end
 end
 
 -- every 1 second check tank exists
 
 script.on_nth_tick(60, function()
-	if not storage.arig_condensing_agricultural_tower then
+	if not storage.condensing_agricultural_tower then
 		return
 	end
 
-	for id, data in pairs(storage.arig_condensing_agricultural_tower) do
+	for id, data in pairs(storage.condensing_agricultural_tower) do
 		local tower = data.tower
 		if not (tower and tower.valid) then
 			if data.tank and data.tank.valid then
 				data.tank.destroy()
 			end
-			storage.arig_condensing_agricultural_tower[id] = nil
+			storage.condensing_agricultural_tower[id] = nil
 		else
 			local tank = data.tank
 
@@ -115,7 +115,7 @@ script.on_event(defines.events.on_tower_mined_plant, function(event)
 		return
 	end
 	
-	local data = storage.arig_condensing_agricultural_tower and storage.arig_condensing_agricultural_tower[tower.unit_number]
+	local data = storage.condensing_agricultural_tower and storage.condensing_agricultural_tower[tower.unit_number]
 	if not data or not data.tank or not data.tank.valid then
 		return
 	end
@@ -144,12 +144,12 @@ end)
 
 
 local function on_init(event)
-	storage.arig_condensing_agricultural_tower = storage.arig_condensing_agricultural_tower or {}
+	storage.condensing_agricultural_tower = storage.condensing_agricultural_tower or {}
 end
 script.on_init(on_init)
 
 local function on_configuration_changed(event)
-	storage.arig_condensing_agricultural_tower = storage.arig_condensing_agricultural_tower or {}
+	storage.condensing_agricultural_tower = storage.condensing_agricultural_tower or {}
 end
 script.on_configuration_changed(on_configuration_changed)
 

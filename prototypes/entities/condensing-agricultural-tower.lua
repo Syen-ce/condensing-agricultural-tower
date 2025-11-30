@@ -21,7 +21,7 @@ data.extend({
     place_result = "condensing-agricultural-tower",
     stack_size = 20,
     weight = 50*kg,
-    default_import_location = "arig",
+    default_import_location = "gleba",
 },
 {
     type = "recipe",
