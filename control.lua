@@ -123,10 +123,11 @@ script.on_event(defines.events.on_tower_mined_plant, function(event)
 	local tank = data.tank
 	--PlantPrototype uses standard MinableProperties
 	--if the fluid is defined in a vanilla-like way, use that instead
+	--since there is only one fluid buffer for the tower, stop at the first (and presumably only) fluid found
 	local to_insert = event.plant.prototype.mineable_properties.products
 	for _,i in ipairs(to_insert) do
 		if i.type == "fluid" then
-			game.print("Adding " .. i.amount .. " of " .. i.name .. " to storage tank")
+			--game.print("Adding " .. i.amount .. " of " .. i.name .. " to storage tank")
 			tank.insert_fluid({name = i.name, amount = i.amount, temperature = i.temperature or 0 })
 			return
 		end
