@@ -325,7 +325,7 @@ data.extend({
             recipe = "condensing-agricultural-tower"
         },
         },
-        prerequisites = {"agriculture"},
+        prerequisites = {"agriculture", "carbon-fiber"},
         unit =
         {
         count = 1500,
