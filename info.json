@@ -1,6 +1,6 @@
 {
   "name": "condensing-agricultural-tower",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Condensing agricultural tower",
   "author": "Syen",
   "factorio_version": "2.0",
@@ -9,7 +9,7 @@
     "space-age",
     "quality"
   ],
-  "description": "An agricultural tower able to condense various liquids every time it harvests a plant.",
+  "description": "An agricultural tower able to condense various liquids into a tank every time it harvests a plant.",
   "quality_required": true,
   "rail_bridges_required": true,
   "space_travel_required": true,

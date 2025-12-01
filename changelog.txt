@@ -1,5 +1,12 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.0
+Version: 1.0.1
+Date: 2025-11-30
+  Features:
+    - Added support vanilla-like MinableProperties.results implementation (by CompactedPrism)
+  Locale:
+    - Fixed locale errors
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
 Date: 2025-11-30
   Features:
     - Added condensing agricultural tower

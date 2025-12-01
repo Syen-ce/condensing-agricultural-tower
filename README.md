@@ -1,6 +1,6 @@
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/Mu7zkD7THf)
 
-A agricultural tower able to condense various liquids every time it harvests a plant
+Adds the ability to harvest fluid from plants using a new agricultural tower, the fluids are stored into a tank inside the tower
 
 ![Condensing agricultural tower harvesting trees](https://raw.githubusercontent.com/Syen-ce/condensing-agricultural-tower/refs/heads/main/imgs/condensing-trees.png)
 
@@ -17,3 +17,7 @@ The condensing agricultural tower works with vanilla plants, any of this can be 
 # For modders
 
 If you want to add your own plant you can see [For modders](https://github.com/Syen-ce/condensing-agricultural-tower/blob/main/compat/for-modders.lua)
+
+# Credits
+
+- CompactedPrism for the MinableProperties.results implementation

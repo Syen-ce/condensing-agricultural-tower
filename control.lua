@@ -78,19 +78,6 @@ local function add_plant_condensing_tower(plant_name, fluid_name, amount, temper
 end
 
 
-if settings.startup["enable-tree-condensing-water"].value == true then
-  add_plant_condensing_tower("tree-plant", "water", 1500)
-end
-
-if settings.startup["enable-jellynut-condensing-lubricant"].value == true then
-  add_plant_condensing_tower("jellystem", "lubricant", 420)
-end
-
-if settings.startup["enable-yumako-condensing-steam"].value == true then
-  add_plant_condensing_tower("yumako-tree", "steam", 810, 165)
-end
-
-
 remote.add_interface("condensing-tower", {
   add_plant = function(plant_name, fluid_name, amount, temperature)
     if plant_name and fluid_name and amount then
