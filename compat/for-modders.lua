@@ -1,4 +1,4 @@
--- Method 1: Add fluid, amount, temperature to the minable properties of your plant
+-- Method 1 (preferred): Add fluid, amount, temperature to the minable properties of your plant
 
 your_plant.minable = {
     mining_particle = "yumako-mining-particle",
