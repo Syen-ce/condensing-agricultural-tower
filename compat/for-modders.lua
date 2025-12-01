@@ -1,9 +1,19 @@
--- To add your plant to the table, paste in control
+-- Method 1: Add fluid, amount, temperature to the minable properties of your plant
+
+your_plant.minable = {
+    mining_particle = "yumako-mining-particle",
+    mining_time = 0.5,
+    results = {
+      { type = "fluid", name = "steam", amount = 100, temperature = 165 }
+    },
+  },
+
+-- Method 2: To add your plant to the table, paste in control
 
 script.on_init(function()
   if remote.interfaces["condensing-tower"] then
     remote.call("condensing-tower", "add_plant", 
-                "your-plant", "your-liquid", 1500, 0) -- plant, liquid, amount, temperature -- Use: ((liquid_amount * 23 avaliable tiles)/minutes of growing) / 60 seconds = amount liquid/second
+                "your-plant", "your-liquid", 1500, 0) -- plant, fluid, amount, temperature -- Use: ((liquid_amount * 23 avaliable tiles)/minutes of growing) / 60 seconds = amount liquid/second
   end
 end)
 
