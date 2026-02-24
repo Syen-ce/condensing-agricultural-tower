@@ -1,5 +1,14 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.1
+Version: 1.1.1
+Date: 2026-02-24
+  Changes:
+    - Added surface conditions
+  Graphics:
+    - Increased the contrast and saturation of the tower icon
+  Locale:
+    - Fixed locale errors between yumako and jellynut setting descriptions
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
 Date: 2025-11-30
   Features:
     - Added support vanilla-like MinableProperties.results implementation (by CompactedPrism)
