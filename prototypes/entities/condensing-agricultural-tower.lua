@@ -53,6 +53,14 @@ data.extend({
     open_sound = sounds.mech_large_open,
     close_sound = sounds.mech_large_close,
     input_inventory_size = 3,
+    surface_conditions =
+    {
+      {
+        property = "pressure",
+        min = 500,
+        max = 10000
+      }
+    },
     radius_visualisation_picture =
     {
       filename = "__core__/graphics/white-square.png",
