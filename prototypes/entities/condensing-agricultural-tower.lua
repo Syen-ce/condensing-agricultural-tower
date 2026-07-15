@@ -26,7 +26,7 @@ data.extend({
 {
     type = "recipe",
     name = "condensing-agricultural-tower",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     auto_recycle = false,
     enabled = false,
     energy_required = 5,
